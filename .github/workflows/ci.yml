@@ -37,18 +37,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          cd tailwind
           npm i
       - name: Build the app
         run: |
-          cd tailwind
           npm run build
       - name: Run Component Tests
         run: |
-          cd: tailwind
           npm run test
       - name: Start the app
         run: |
-          cd tailwind
           npm start &
           npx wait-on --timeout 60000
